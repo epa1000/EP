@@ -17,6 +17,7 @@
                     colors: {
                         'primary': '#4f46e5', // Indigo 600 (Purple accent for logo)
                         'secondary': '#f43f5e', // Rose 500 (Accent)
+                        'accent-green': '#84cc16', // A vibrant lime/grass green (Lime 500) for service circles
                         'light-bg': '#f8fafc', // Slate 50 (Main background)
                         'light-card': '#ffffff', // White (Card background)
                     }
@@ -44,6 +45,12 @@
             height: 4px;
             background-color: #f43f5e; 
             border-radius: 9999px;
+        }
+        /* Custom style for the dotted pattern background in the new section */
+        .dotted-bg {
+            background-color: #f8fafc;
+            background-image: radial-gradient(#e5e7eb 1.5px, transparent 1.5px);
+            background-size: 16px 16px;
         }
     </style>
 </head>
@@ -157,14 +164,13 @@
                 <a href="#work" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-primary">WORKS</a>
                 <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-primary">OUR TEAM</a>
                 <a href="#work" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-primary">GALLERY</a>
-                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-primary">CONTACT</a>
                 <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-green-600 hover:bg-green-700 mt-2 uppercase">GET STARTED</a>
             </div>
         </div>
     </nav>
     
     <main>
-        <!-- Hero Section: Updated to Dark Theme -->
+        <!-- Hero Section -->
         <section class="relative h-[80vh] flex items-center justify-center overflow-hidden">
             <!-- Background Image and Dark Overlay -->
             <div class="absolute inset-0 z-0 bg-cover bg-center" style="background-image: url('https://i.pinimg.com/1200x/25/c4/56/25c456d733a7a10cb1d89aa9df0284bd.jpg');"></div>
@@ -198,38 +204,185 @@
             </button>
         </section>
 
-        <!-- Services Section (Remains Light) -->
+        <!-- Services Section -->
         <section id="services" class="py-20 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-7xl mx-auto">
-                <h2 class="section-title text-4xl font-bold text-gray-900 mb-16">What We Do</h2>
+            <div class="max-w-7xl mx-auto text-center">
+                <!-- Accent element above title -->
+                <div class="w-12 h-1 bg-accent-green mx-auto rounded-full mb-4"></div>
+                <h2 class="text-4xl font-bold text-gray-900 mb-16">OUR SERVICES</h2>
                 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Service Card 1: Web Design -->
-                    <div class="bg-light-card p-8 rounded-2xl shadow-xl ring-1 ring-gray-100 transition duration-500 hover:scale-[1.02] hover:shadow-primary/30 border-t-4 border-primary">
-                        <svg class="h-10 w-10 text-primary mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L4 21m0-3h11.25m6.75 0V3m-3.75 14L20 10m0 0L17.5 7.5m2.5 2.5L14 10m0-3h11.25m-11.25 10v-3.75M12 9V7m0 2v4m0 4v2"/></svg>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Custom Web Development</h3>
-                        <p class="text-gray-600">Building lightning-fast, secure, and fully responsive websites using modern frameworks and cutting-edge design principles.</p>
+                <!-- Service Grid: 4 columns, styled with green accents -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    
+                    <!-- Service Card 1: GRAPHIC DESIGN -->
+                    <div class="bg-light-card p-4 rounded-xl shadow-lg ring-1 ring-gray-100 transition duration-300 hover:shadow-accent-green/30">
+                        <div class="flex justify-center mb-4">
+                            <!-- Circular Icon with green border/background -->
+                            <div class="w-20 h-20 flex items-center justify-center rounded-full border-2 border-accent-green bg-accent-green/10">
+                                <!-- Diamond Icon -->
+                                <svg class="h-10 w-10 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3M21 12.79l-7 7M21 12.79h-7V5.79l7 7z" /></svg>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 uppercase">GRAPHIC DESIGN</h3>
                     </div>
 
-                    <!-- Service Card 2: Branding -->
-                    <div class="bg-light-card p-8 rounded-2xl shadow-xl ring-1 ring-gray-100 transition duration-500 hover:scale-[1.02] hover:shadow-secondary/30 border-t-4 border-secondary">
-                        <svg class="h-10 w-10 text-secondary mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Strategic Branding & Identity</h3>
-                        <p class="text-gray-600">Crafting unique visual identities, compelling narratives, and complete brand guidelines that resonate with your target audience.</p>
+                    <!-- Service Card 2: LOGO & BRANDING -->
+                    <div class="bg-light-card p-4 rounded-xl shadow-lg ring-1 ring-gray-100 transition duration-300 hover:shadow-accent-green/30">
+                        <div class="flex justify-center mb-4">
+                            <!-- Circular Icon with green border/background -->
+                            <div class="w-20 h-20 flex items-center justify-center rounded-full border-2 border-accent-green bg-accent-green/10">
+                                <!-- Chart/Bar Icon -->
+                                <svg class="h-10 w-10 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.5l5.5-4 5 4L21 6.845M12 21V12M18 21V15M6 21V18" /></svg>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 uppercase">LOGO & BRANDING</h3>
                     </div>
 
-                    <!-- Service Card 3: Content -->
-                    <div class="bg-light-card p-8 rounded-2xl shadow-xl ring-1 ring-gray-100 transition duration-500 hover:scale-[1.02] hover:shadow-indigo-500/30 border-t-4 border-indigo-500">
-                        <svg class="h-10 w-10 text-indigo-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-3">SEO & Content Strategy</h3>
-                        <p class="text-gray-600">Developing data-driven content strategies and optimizing your digital presence to ensure maximum visibility and organic growth.</p>
+                    <!-- Service Card 3: PROFESSIONAL DESIGNING -->
+                    <div class="bg-light-card p-4 rounded-xl shadow-lg ring-1 ring-gray-100 transition duration-300 hover:shadow-accent-green/30">
+                        <div class="flex justify-center mb-4">
+                            <!-- Circular Icon with green border/background -->
+                            <div class="w-20 h-20 flex items-center justify-center rounded-full border-2 border-accent-green bg-accent-green/10">
+                                <!-- Lightbulb Icon -->
+                                <svg class="h-10 w-10 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.603 10l-1.896 2.528A4.5 4.5 0 0012 16.5m1.334-7.334l2.502 1.251m.512 6.568A4.5 4.5 0 0112 16.5m-1.334-7.334l-2.502 1.251m-2.164 1.082l-2.43 1.215M21 12a9 9 0 01-18 0" /></svg>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 uppercase">PROFESSIONAL DESIGNING</h3>
+                    </div>
+                    
+                    <!-- Service Card 4: WEB DESIGN -->
+                    <div class="bg-light-card p-4 rounded-xl shadow-lg ring-1 ring-gray-100 transition duration-300 hover:shadow-accent-green/30">
+                        <div class="flex justify-center mb-4">
+                            <!-- Circular Icon with green border/background -->
+                            <div class="w-20 h-20 flex items-center justify-center rounded-full border-2 border-accent-green bg-accent-green/10">
+                                <!-- Browser/Web Icon (Placeholder for the small dot icon) -->
+                                <svg class="h-10 w-10 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21h7.5c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H4.5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2H12M12 21v-8m0 0V3m0 0h-.5M12 3h.5M4.5 9.5h15" /></svg>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 uppercase">WEB DESIGN</h3>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-indigo-50">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left: Profile Image with Curved Style -->
+                <div class="flex justify-center lg:justify-start relative">
+                    <div class="w-full max-w-lg h-96 lg:h-full bg-white rounded-l-full rounded-r-3xl shadow-2xl overflow-hidden flex items-center justify-end">
+                        <img 
+                            src="https://placehold.co/400x500/84cc16/ffffff?text=Muhammed+Ashiq+CP" 
+                            alt="Muhammed Ashiq CP" 
+                            class="h-full w-full object-cover object-top p-4"
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x500/84cc16/ffffff?text=Muhammed+Ashiq+CP';"
+                        >
+                    </div>
+                </div>
+                
+                <!-- Right: About Text -->
+                <div class="lg:pl-8">
+                    <!-- Accent element above title -->
+                    <div class="w-8 h-1 bg-accent-green rounded-full mb-3"></div>
+                    <p class="text-gray-600 font-medium tracking-widest uppercase mb-1">About Me</p>
+                    <h2 class="text-4xl font-extrabold text-gray-900 mb-6">
+                        MUHAMMED ASHIQ CP
+                    </h2>
+                    <p class="text-base text-gray-600 space-y-4">
+                        <span class="block">
+                            I am a highly competent IT professional with a proven track record in Computer graphics, designing websites, networking and managing databases. 
+                        </span>
+                        <span class="block">
+                            I have strong technical skills as well as excellent interpersonal skills, enabling me to interact with a wide range of clients. I am eager to be challenged in order to grow and further improve my IT skills. 
+                        </span>
+                        <span class="block">
+                            My greatest passion in life is using my technical know-how to benefit other people and organisations.
+                        </span>
+                    </p>
+                    <a href="#contact" class="mt-8 inline-block px-8 py-3 text-lg font-semibold text-white bg-green-600 rounded-lg shadow-xl hover:bg-green-700 transition duration-300">
+                        Connect with Me
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Why Choose Us Section (New section) -->
+        <section id="why-choose-us" class="py-20 px-4 sm:px-6 lg:px-8 dotted-bg">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left: Text Content and Features -->
+                <div class="lg:pr-8">
+                    <!-- Accent element above title -->
+                    <div class="w-8 h-1 bg-accent-green rounded-full mb-3"></div>
+                    <p class="text-gray-600 font-medium tracking-widest uppercase mb-1">Why Choose Us</p>
+                    <h2 class="text-4xl font-extrabold text-gray-900 mb-10">
+                        WHY THEY CHOOSE<br>CPCREATIVES
+                    </h2>
+
+                    <!-- Feature 1: CREATIVE DESIGN -->
+                    <div class="flex items-start space-x-6 mb-8">
+                        <!-- Icon container -->
+                        <div class="flex-shrink-0 w-16 h-16 flex items-center justify-center rounded-full border-2 border-accent-green bg-accent-green/10">
+                            <!-- Snowflake icon (Placeholder for the unique star icon) -->
+                            <svg class="h-8 w-8 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M11.35 15.11a5.625 5.625 0 01-.326 1.487l-.05 1.5c.092.3.167.61.167.925 0 1.242-1.008 2.25-2.25 2.25S7 20.767 7 19.525c0-.315.075-.625.167-.925l-.05-1.5a5.625 5.625 0 01-.326-1.487M12 18v2.25M12 1.5v2.25M12 18H5.625M12 18h6.375M12 1.5L9 4.5M12 1.5l3 3M18.375 9.75h-1.5m-3.75 0h-3.75m-3.75 0H5.625" /></svg>
+                        </div>
+                        <!-- Text content -->
+                        <div>
+                            <h3 class="text-lg font-bold text-accent-green uppercase">CREATIVE DESIGN</h3>
+                            <p class="text-gray-600 mt-1">
+                                This position requires specialized knowledge of methods and techniques of graphic design and layout. It also often requires higher-level executive and client interaction skills, not just the production of specific pieces, and demonstrate an ability to keep team members working within established deadlines.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2: PIXEL PERFECT CODING -->
+                    <div class="flex items-start space-x-6">
+                        <!-- Icon container -->
+                        <div class="flex-shrink-0 w-16 h-16 flex items-center justify-center rounded-full border-2 border-accent-green bg-accent-green/10">
+                            <!-- Code Tag Icon -->
+                            <svg class="h-8 w-8 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 20l-4-4 4-4" /></svg>
+                        </div>
+                        <!-- Text content -->
+                        <div>
+                            <h3 class="text-lg font-bold text-accent-green uppercase">PIXEL PERFECT CODING</h3>
+                            <p class="text-gray-600 mt-1">
+                                You might think that We programmers are artists, But programming is in an extremely creative profession. It’s logic based creativity.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right: Graphic Image -->
+                <div class="flex justify-center lg:justify-end">
+                    <div class="w-full max-w-md bg-white rounded-xl shadow-2xl overflow-hidden p-6 relative">
+                        <!-- Black/Gold Logo Image Placeholder -->
+                        <img 
+                            src="https://placehold.co/400x500/1f2937/d4af37?text=CP+Creatives+Logo" 
+                            alt="CP Creatives Black and Gold Logo Branding" 
+                            class="w-full h-auto object-cover rounded-lg shadow-xl"
+                            onerror="this.onerror=null;this.src='https://placehold.co/400x500/1f2937/d4af37?text=CP+Creatives+Logo';"
+                        >
+                        <!-- Added text details from the reference image for fidelity -->
+                        <div class="absolute bottom-10 left-10 text-white text-xs font-mono opacity-80 space-y-1">
+                            <p>CREATIVES</p>
+                            <p class="text-green-400">GRAPHIC DESIGN</p>
+                            <p class="text-green-400">LOGO & BRANDING</p>
+                            <p class="text-green-400">BUSINESS CARD & WEDDING CARDS</p>
+                            <p class="text-green-400">PROFESSIONAL DESIGNING</p>
+                            <p class="text-green-400">WEB DESIGN</p>
+                            <p class="mt-2 text-[10px]">9847321611 / cpc.creatives@gmail.com / DM us @ IG</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        
+
         <!-- Portfolio/Work Section -->
-        <section id="work" class="py-20 px-4 sm:px-6 lg:px-8 bg-indigo-50">
+        <section id="work" class="py-20 px-4 sm:px-6 lg:px-8">
             <div class="max-w-7xl mx-auto">
                 <h2 class="section-title text-4xl font-bold text-gray-900 mb-16">Our Latest Work</h2>
                 
@@ -273,35 +426,6 @@
                             <span class="text-xs font-semibold uppercase text-indigo-500">SEO & Content</span>
                             <h3 class="text-2xl font-bold text-gray-900 mt-1 mb-2">Content Flow: 6-Month SEO Campaign</h3>
                             <p class="text-gray-600">Increased organic search traffic by 150% through targeted, high-quality content.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Us Section -->
-        <section id="about" class="py-20 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="section-title text-4xl font-bold text-gray-900 mb-6">Who We Are</h2>
-                    <p class="text-lg text-gray-600 mb-6">
-                        EP Creatives is a collective of designers, developers, and strategists obsessed with solving complex problems through elegant digital solutions. We believe in transparency, collaboration, and delivering work that truly stands out.
-                    </p>
-                    <p class="text-gray-600">
-                        Our journey started in 2023 with a mission to help small and medium businesses compete on the global stage with world-class digital presence. Every project is an opportunity to push creative boundaries and exceed expectations.
-                    </p>
-                </div>
-                
-                <div class="flex justify-center">
-                    <div class="relative p-4 bg-white rounded-3xl shadow-2xl ring-1 ring-gray-100 max-w-sm w-full">
-                         <img src="https://placehold.co/400x400/ffffff/9ca3af?text=EP+Team" 
-                            alt="EP Creatives Team" 
-                            class="w-full h-auto rounded-2xl object-cover border-4 border-primary/50"
-                            onerror="this.onerror=null;this.src='https://placehold.co/400x400/ffffff/9ca3af?text=EP+Team';"
-                         >
-                        <div class="absolute bottom-6 left-6 right-6 bg-white/80 backdrop-blur-sm p-4 rounded-xl text-center shadow-lg border border-gray-100">
-                            <p class="text-xl font-bold text-primary">The Collective</p>
-                            <p class="text-sm text-gray-600">Designers, Coders, Dreamers.</p>
                         </div>
                     </div>
                 </div>
